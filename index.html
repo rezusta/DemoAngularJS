@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html ng-app="demoAngularJS">
+
+  <head>
+    <link rel="stylesheet" href="lib/style.css" />
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body ng-controller="ControladorPrincipal">
+    <h1>{{Titulo}}</h1>
+    <div>
+      <div>{{error}}</div>
+      <table>
+        <thead>
+          <tr>
+            <th>NIA</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="alumno in alumnos">
+            <td>{{alumno.NIA}}</td>
+            <td>{{alumno.nombre}}</td>
+            <td>{{alumno.apellido}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
