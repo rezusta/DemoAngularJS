@@ -1,0 +1,22 @@
+<div>
+    <h1>{{Titulo}}</h1>
+    <div>
+        <div>{{error}}</div>
+        <table>
+        <thead>
+            <tr>
+            <th>NIA</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="alumno in alumnos">
+            <td>{{alumno.NIA}}</td>
+            <td>{{alumno.nombre}}</td>
+            <td>{{alumno.apellido}}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
