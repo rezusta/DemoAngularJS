@@ -7,14 +7,18 @@
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-route.js"></script>
     <script type="text/javascript" src="lib/app.js"></script>
-    <script type="text/javascript" src="lib/ControladorAlumnos.js"></script>
-    <script type="text/javascript" src="lib/servicios/servicioAlumnos.js"></script>
-    <script type="text/javascript" src="lib/servicios/servicioAsignaturas.js"></script>
+    <script type="text/javascript" src="lib/controladores/ControladorAlumnos.js"></script>
+    <script type="text/javascript" src="lib/controladores/MainControlador.js"></script>
+    <script type="text/javascript" src="lib/servicios/ServicioAlumnos.js"></script>
+    <script type="text/javascript" src="lib/servicios/ServicioAsignaturas.js"></script>
   </head>
 
   <body>
-    <!--Menú-->
-    <h1>Demo AngularJS</h1>
+    <div ng-controller="MainControlador">
+      <h1>Demo AngularJS</h1>
+      <button ng-click="navegarAAlumnos()">Alumnos</button>
+      <button ng-click="navegarAAsignaturas()">Asignaturas</button>
+    </div>
     <div ng-view></div>
   </body>
 </html>
