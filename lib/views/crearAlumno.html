@@ -1,0 +1,20 @@
+<h2>Gestión de alumnos</h2>
+<div>
+    <h3>Nuevo alumno</h3>
+    <div>
+        <label for="NIA">NIA:</label><br>
+        <input ng-model="NIA" type="text" id="NIA" name="NIA">
+    </div><br>
+    <div>
+        <label for="Nombre">Nombre:</label><br>
+        <input ng-model="nombre" type="text" id="Nombre" name="Nombre">
+    </div><br>
+    <div>
+        <label for="Apellido">Apellido:</label><br>
+        <input ng-model="apellido" type="text" id="Apellido" name="Apellido">
+    </div><br>
+    <button ng-click="crearAlumno(NIA, nombre, apellido)">Crear</button>
+    <button ng-click="cancelarCreacion()">Cancelar</button><br>
+    <div>{{mensajeCreacion}}</div>
+    <div>{{errorCreacion}}</div>
+</div>
