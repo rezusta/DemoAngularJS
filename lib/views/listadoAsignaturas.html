@@ -1,0 +1,34 @@
+<h2>Gestión de asignaturas</h2>
+<div>
+    <md-button class="md-raised md-primary" ng-click="navegaPantallaCrearAsignatura()">Crear asignatura</md-button>
+    <h3>Listado de asignaturas</h3>
+    <div>{{error}}</div>
+    <div>{{mensaje}}</div><br>
+    <table style="width: 70%">
+        <thead>
+            <tr>
+                <th>Asignatura</th>
+                <th>Aula</th>
+                <th>Dia</th>
+                <th>Hora</th>
+                <th>ano</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="asignatura in asignaturas">
+                <td><a href="" ng-click="detalleAsignatura(asignatura.ID)">{{asignatura.nombre}}</a></td>
+                <td>{{asignatura.aula}}</td>
+                <td ng-if="asignatura.dia == 1">Lunes</td>
+                <td ng-if="asignatura.dia == 2">Martes</td>
+                <td ng-if="asignatura.dia == 3">Miércoles</td>
+                <td ng-if="asignatura.dia == 4">Jueves</td>
+                <td ng-if="asignatura.dia == 5">Viernes</td>
+                <td ng-if="asignatura.dia == 6">Sábado</td>
+                <td ng-if="asignatura.dia == 7">Domingo</td>
+                <td>{{asignatura.hora}}h</td>
+                <td>{{asignatura.ano}}</td>
+                <td><md-button class="md-raised md-accent" ng-click="eliminarAsignatura(asignatura.ID)">Eliminar</md-button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

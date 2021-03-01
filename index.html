@@ -4,21 +4,32 @@
 
   <head>
     <link rel="stylesheet" href="lib/styles.css" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-route.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../node_modules/angular-messages/angular-messages.js"></script>
+    <script src="../node_modules/angular-material/angular-material.js"></script>
     <script type="text/javascript" src="lib/app.js"></script>
     <script type="text/javascript" src="lib/services/ServicioAlumnos.js"></script>
     <script type="text/javascript" src="lib/services/ServicioAsignaturas.js"></script>
     <script type="text/javascript" src="lib/controllers/ControladorAlumnos.js"></script>
+    <script type="text/javascript" src="lib/controllers/ControladorAsignaturas.js"></script>
     <script type="text/javascript" src="lib/controllers/MainControlador.js"></script>
   </head>
 
   <body>
     <div ng-controller="MainControlador">
-      <h1>Demo AngularJS</h1>
-      <button ng-click="navegarAAlumnos()">Alumnos</button>
-      <button ng-click="navegarAAsignaturas()">Asignaturas</button>
+      <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+          <h2 flex md-truncate>Demo AngularJS</h2>
+          <md-button class="md-raised md-primary" ng-click="navegarAAlumnos()">Alumnos</md-button>
+          <md-button class="md-raised md-primary" ng-click="navegarAAsignaturas()">Asignaturas</md-button>
+        </div>
+      </md-toolbar>
     </div>
-    <div ng-view></div>
+    <div style="padding-top: 10px; padding-left: 30px;" ng-view></div>
   </body>
 </html>

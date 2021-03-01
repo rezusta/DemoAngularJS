@@ -1,8 +1,9 @@
 <h2>Gestión de alumnos</h2>
 <div>
-    <button ng-click="navegaPantallaCrearAlumno()">Crear alumno</button>
+    <md-button class="md-raised md-primary" ng-click="navegaPantallaCrearAlumno()">Crear alumno</md-button>
     <h3>Listado de alumnos</h3>
     <div>{{error}}</div>
+    <div>{{mensaje}}</div><br>
     <table>
         <thead>
             <tr>
@@ -13,9 +14,10 @@
         </thead>
         <tbody>
             <tr ng-repeat="alumno in alumnos">
-                <td>{{alumno.NIA}}</td>
+                <td><a href="" ng-click="detalleAlumno(alumno.NIA)">{{alumno.NIA}}</a></td>
                 <td>{{alumno.nombre}}</td>
                 <td>{{alumno.apellido}}</td>
+                <td><md-button class="md-raised md-accent" ng-click="eliminarAlumno(alumno.NIA)">Eliminar</md-button></td>
             </tr>
         </tbody>
     </table>
