@@ -1,24 +1,35 @@
-<h2>Gestión de alumnos</h2>
-<div>
-    <md-button class="md-raised md-primary" ng-click="navegaPantallaCrearAlumno()">Crear alumno</md-button>
-    <h3>Listado de alumnos</h3>
-    <div>{{error}}</div>
-    <div>{{mensaje}}</div><br>
-    <table>
-        <thead>
-            <tr>
-                <th>NIA</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="alumno in alumnos">
-                <td><a href="" ng-click="detalleAlumno(alumno.NIA)">{{alumno.NIA}}</a></td>
-                <td>{{alumno.nombre}}</td>
-                <td>{{alumno.apellido}}</td>
-                <td><md-button class="md-raised md-accent" ng-click="eliminarAlumno(alumno.NIA)">Eliminar</md-button></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="cont">
+    <h2>Gestión de alumnos</h2>
+    <h3 ng-if="alumnos.length > 0">Listado de alumnos</h3>
+    <div class="error">{{error}}</div>
+    <div class="ok">{{mensaje}}</div><br>
+    <div>
+        <table class="tabla" ng-if="alumnos.length > 0">
+            <thead>
+                <tr>
+                    <th>NIA</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr ng-repeat="alumno in alumnos">
+                    <td>{{alumno.NIA}}</td>
+                    <td>{{alumno.nombre}}</td>
+                    <td>{{alumno.apellido}}</td>
+                    <td style="float: right;">
+                        <md-button ng-click="detalleAlumno(alumno.NIA)"
+                                class="md-icon-button md-primary">
+                            <md-icon md-svg-icon="lib/views/assets/edit.svg"></md-icon>
+                        </md-button>
+                        <md-button ng-click="eliminarAlumno(alumno.NIA)"
+                                class="md-icon-button md-warn">
+                            <md-icon md-svg-icon="lib/views/assets/delete.svg"></md-icon>
+                        </md-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <md-button class="md-raised md-primary" style="margin-top: 20px;" ng-click="navegaPantallaCrearAlumno()">Crear alumno</md-button>
+    </div>
 </div>

@@ -1,22 +1,21 @@
-<h2>Gestión de asignaturas</h2>
-<div>
-    <md-button class="md-raised md-primary" ng-click="navegaPantallaCrearAsignatura()">Crear asignatura</md-button>
-    <h3>Listado de asignaturas</h3>
-    <div>{{error}}</div>
-    <div>{{mensaje}}</div><br>
-    <table style="width: 70%">
+<div class="cont">
+    <h2>Gestión de asignaturas</h2>
+    <h3 ng-if="asignaturas.length > 0">Listado de asignaturas</h3>
+    <div class="error">{{error}}</div>
+    <div class="ok">{{mensaje}}</div><br>
+    <table class="tablaAmp" ng-if="asignaturas.length > 0">
         <thead>
             <tr>
                 <th>Asignatura</th>
                 <th>Aula</th>
                 <th>Dia</th>
                 <th>Hora</th>
-                <th>ano</th>
+                <th>Año</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="asignatura in asignaturas">
-                <td><a href="" ng-click="detalleAsignatura(asignatura.ID)">{{asignatura.nombre}}</a></td>
+                <td>{{asignatura.nombre}}</td>
                 <td>{{asignatura.aula}}</td>
                 <td ng-if="asignatura.dia == 1">Lunes</td>
                 <td ng-if="asignatura.dia == 2">Martes</td>
@@ -27,8 +26,18 @@
                 <td ng-if="asignatura.dia == 7">Domingo</td>
                 <td>{{asignatura.hora}}h</td>
                 <td>{{asignatura.ano}}</td>
-                <td><md-button class="md-raised md-accent" ng-click="eliminarAsignatura(asignatura.ID)">Eliminar</md-button></td>
+                <td style="float: right;">
+                    <md-button ng-click="detalleAsignatura(asignatura.ID)"
+                            class="md-icon-button md-primary">
+                        <md-icon md-svg-icon="lib/views/assets/edit.svg"></md-icon>
+                    </md-button>
+                    <md-button ng-click="eliminarAsignatura(asignatura.ID)"
+                            class="md-icon-button md-warn">
+                        <md-icon md-svg-icon="lib/views/assets/delete.svg"></md-icon>
+                    </md-button>
+                </td>
             </tr>
         </tbody>
     </table>
+    <md-button class="md-raised md-primary" style="margin-top: 20px;" ng-click="navegaPantallaCrearAsignatura()">Crear asignatura</md-button>
 </div>

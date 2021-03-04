@@ -1,22 +1,26 @@
-<h2>Gestión de alumnos</h2>
-<h3>Nuevo alumno</h3>
-<div style="width: 20%">
-    <md-input-container class="md-block">
-        <label>NIA:</label>
-        <input ng-model="NIA" type="text" id="NIA" name="NIA">
-    </md-input-container>
-    <md-input-container class="md-block">
-        <label>Nombre:</label>
-        <input ng-model="nombre" type="text" id="Nombre" name="Nombre">
-    </md-input-container>
-    <md-input-container class="md-block">
-        <label>Apellido:</label>
-        <input ng-model="apellido" type="text" id="Apellido" name="Apellido">
-    </md-input-container>
-    <div style="margin: auto;">
-        <md-button class="md-raised md-primary" ng-click="crearAlumno(NIA, nombre, apellido)">Crear</md-button>
-        <md-button class="md-raised md-accent" ng-click="cancelar()">Cancelar</md-button><br>
+<div class="cont">
+    <h2>Gestión de alumnos</h2>
+    <div class="formulario">
+        <h3>Nuevo alumno</h3>
+        <div style="margin-top: 30px;">
+            <md-input-container class="md-block">
+                <label>NIA:</label>
+                <input ng-model="NIA" type="text" id="NIA" name="NIA">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Nombre:</label>
+                <input ng-model="nombre" type="text" id="Nombre" name="Nombre">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Apellido:</label>
+                <input ng-model="apellido" type="text" id="Apellido" name="Apellido">
+            </md-input-container>
+            <div>
+                <md-button class="md-raised md-primary botonDerecha" ng-click="crearAlumno(NIA, nombre, apellido)">Crear</md-button>
+                <md-button class="md-raised md-warn botonDerecha" style="color: white" ng-click="cancelar()">Cancelar</md-button><br>
+            </div>
+        </div>
     </div>
+    <div>{{mensajeCreacion}}</div>
+    <div>{{errorCreacion}}</div>
 </div>
-<div>{{mensajeCreacion}}</div>
-<div>{{errorCreacion}}</div>
