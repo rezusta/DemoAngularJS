@@ -1,9 +1,11 @@
+<md-subheader class="md-primary" style="background-color: rgb(221, 255, 221);">Gestión de Asignaturas</md-subheader>
 <div class="cont">
-    <h2>Gestión de asignaturas</h2>
-    <h3 ng-if="asignaturas.length > 0">Listado de asignaturas</h3>
-    <div class="error">{{error}}</div>
-    <div class="ok">{{mensaje}}</div><br>
-    <table class="tablaAmp" ng-if="asignaturas.length > 0">
+    <div style="width: 50%; display: inline-block;">
+        <h3 ng-if="asignaturas.length > 0" style="float:left;">Listado de asignaturas</h3>
+        <md-button class="md-raised md-primary" style="float: right; margin-top: 20px;" ng-click="navegaPantallaCrearAsignatura()">Crear asignatura</md-button>
+    </div>
+    <table class="tablaAmp" ng-if="asignaturas.length > 0" style="clear: both;">
+        <md-divider style="margin-bottom: 20px; width: 210px;"></md-divider>
         <thead>
             <tr>
                 <th>Asignatura</th>
@@ -39,5 +41,4 @@
             </tr>
         </tbody>
     </table>
-    <md-button class="md-raised md-primary" style="margin-top: 20px;" ng-click="navegaPantallaCrearAsignatura()">Crear asignatura</md-button>
 </div>

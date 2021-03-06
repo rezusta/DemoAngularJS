@@ -1,8 +1,8 @@
+<md-subheader class="md-primary" style="background-color: rgb(221, 255, 221);">Gestión de Asignaturas</md-subheader>
 <div class="cont">
-    <h2>Gestión de asignaturas</h2>
-    <div class="formulario">
-        <h3>Nueva asignatura</h3>
-        <div style="margin-top:30px;">
+    <div class="formularioCrear">
+        <md-subheader class="md-primary" style="background-color: rgb(221, 247, 255);">Nueva Asignatura</md-subheader>
+        <div style="padding:20px;">
             <md-input-container class="md-block">
                 <label>Nombre:</label>
                 <input ng-model="nombre" type="text" id="nombre" name="nombre">
@@ -35,11 +35,9 @@
                     <input ng-model="ano" type="text" id="ano" name="ano">
                 </md-input-container>
             </div>
-            <div>
+            <div style="text-align: right;">
                 <md-button class="md-raised md-primary botonDerecha" ng-click="crearAsignatura(nombre, aula, dia, hora, ano)">Guardar</md-button>
-                <md-button class="md-raised md-accent botonDerecha" ng-click="cancelar()">Volver</md-button><br>
-                <div class="ok">{{mensaje}}</div>
-                <div class="error">{{error}}</div>
+                <md-button class="md-raised md-warn botonDerecha" style="color: white" ng-click="cancelar()">Cancelar</md-button><br>
             </div>
         </div>
     </div>

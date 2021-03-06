@@ -1,10 +1,12 @@
+<md-subheader class="md-primary" style="background-color: rgb(221, 255, 221);">Gestión de Alumnos</md-subheader>
 <div class="cont">
-    <h2>Gestión de alumnos</h2>
-    <h3 ng-if="alumnos.length > 0">Listado de alumnos</h3>
-    <div class="error">{{error}}</div>
-    <div class="ok">{{mensaje}}</div><br>
-    <div>
-        <table class="tabla" ng-if="alumnos.length > 0">
+    <div style="width: 40%; display: inline-block;">
+        <h3 ng-if="alumnos.length > 0" style="float:left;">Listado de alumnos</h3>
+        <md-button class="md-raised md-primary" style="float: right; margin-top: 20px;" ng-click="navegaPantallaCrearAlumno()">Crear alumno</md-button>
+    </div>
+    <div style="clear: both;">
+        <md-divider style="margin-bottom: 20px; width: 180px;"></md-divider>
+        <table class="tabla" style="width: 40%;" ng-if="alumnos.length > 0">
             <thead>
                 <tr>
                     <th>NIA</th>
@@ -30,6 +32,5 @@
                 </tr>
             </tbody>
         </table>
-        <md-button class="md-raised md-primary" style="margin-top: 20px;" ng-click="navegaPantallaCrearAlumno()">Crear alumno</md-button>
     </div>
 </div>

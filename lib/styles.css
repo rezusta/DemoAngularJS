@@ -1,50 +1,54 @@
-.tabla {
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 50%; 
-    background-color: white; 
-    border: 1px solid lightgrey; 
-    padding: 10px;
+td, th {
+    padding-right: 30px;
 }
-
-.tablaAmp {
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 70%; 
-    background-color: white; 
-    border: 1px solid lightgrey; 
-    padding: 10px;
+th {
+    font-weight: lighter;
+    font-size: smaller;
+    text-align: left;
+    padding-bottom: 20px;
 }
-
-.error {
-    color: red;
-}
-
-.ok {
-    color: green;
+table {
+    width: 50%;
 }
 
 .cont{
-    margin:auto; 
-    text-align: center;
+    padding: 20px;
 }
 
-.formulario {
-    margin-left: auto; 
-    margin-right: auto; 
+.formularioCrear {
     width: 30%; 
-    background-color: white; 
-    padding: 20px; 
     text-align: left; 
     border: 1px solid lightgrey; 
-    padding-bottom: 50px;
 }
 
-.botonDerecha {
-    float: right; 
+.formulario { 
+    width: 30%; 
+    text-align: left; 
+    border: 1px solid lightgrey;
+}
+.container { 
+    text-align: left; 
+    border: 1px solid lightgrey; 
 }
 
 .enLinea {
     clear: both;
     display: inline-block;
+}
+
+.md-list {
+  padding-top: 0; 
+}
+
+.menuicon:hover {
+    cursor: pointer;
+}
+
+.menuItem {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menuItem:hover {
+    cursor: pointer;
+    background-color: rgb(221, 255, 221);
 }

@@ -1,8 +1,8 @@
+<md-subheader class="md-primary" style="background-color: rgb(221, 255, 221);">Gestión de Alumnos</md-subheader>
 <div class="cont">
-    <h2>Gestión de alumnos</h2>
-    <div class="formulario">
-        <h3>Nuevo alumno</h3>
-        <div style="margin-top: 30px;">
+    <div class="formularioCrear">
+        <md-subheader class="md-primary" style="background-color: rgb(221, 247, 255);">Nuevo Alumno</md-subheader>
+        <div style="padding: 20px;">
             <md-input-container class="md-block">
                 <label>NIA:</label>
                 <input ng-model="NIA" type="text" id="NIA" name="NIA">
@@ -15,12 +15,10 @@
                 <label>Apellido:</label>
                 <input ng-model="apellido" type="text" id="Apellido" name="Apellido">
             </md-input-container>
-            <div>
+            <div style="text-align: right;">
                 <md-button class="md-raised md-primary botonDerecha" ng-click="crearAlumno(NIA, nombre, apellido)">Crear</md-button>
                 <md-button class="md-raised md-warn botonDerecha" style="color: white" ng-click="cancelar()">Cancelar</md-button><br>
             </div>
         </div>
     </div>
-    <div>{{mensajeCreacion}}</div>
-    <div>{{errorCreacion}}</div>
 </div>
