@@ -4,21 +4,29 @@
         <div class="formulario" style="float:left;">
             <md-subheader class="md-primary" style="background-color: rgb(221, 247, 255);">Editar Alumno</md-subheader>
             <div style="padding: 20px;">
+
                 <md-input-container class="md-block">
                     <label>NIA:</label>
                     <input ng-model="NIA" ng-disabled="true" type="text" id="NIA" name="NIA">
                 </md-input-container>
+
                 <md-input-container class="md-block">
                     <label>Nombre:</label>
                     <input ng-model="nombre" type="text" id="Nombre" name="Nombre">
                 </md-input-container>
+
                 <md-input-container class="md-block">
                     <label>Apellido:</label>
                     <input ng-model="apellido" type="text" id="Apellido" name="Apellido">
                 </md-input-container>
+
                 <div style="text-align: right;">
-                    <md-button class="md-raised md-primary botonDerecha" ng-click="actualizarAlumno(NIA, nombre, apellido)">Guardar</md-button>
-                    <md-button class="md-raised md-warn botonDerecha" style="color:white" ng-click="cancelar()">Volver</md-button>
+                    <md-button class="md-raised md-primary botonDerecha" ng-click="actualizarAlumno(NIA, nombre, apellido)">
+                        Guardar
+                    </md-button>
+                    <md-button class="md-raised md-warn botonDerecha" style="color:white" ng-click="cancelar()">
+                        Volver
+                    </md-button>
                 </div>
             </div>
         </div>
@@ -33,7 +41,6 @@
                             <md-icon class="md-secondary md-warn"  ng-click="eliminarAlumnoAsignatura(NIA, asignatura.ID)" aria-label="Chat" md-svg-icon="lib/views/assets/delete.svg"></md-icon>
                         </md-list-item>
                     </md-list>
-    
     
                     <h4>Añadir asignatura</h4>
                     <md-input-container style="width: 50%">
